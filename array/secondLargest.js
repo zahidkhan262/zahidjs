@@ -7,3 +7,11 @@ const secondLargestNumber = (arr) => {
     return d
 }
 console.log(secondLargestNumber(data))
+
+const a = (arr) => {
+    // let d = arr.sort((a, b) => a - b).length - 2
+    // return arr[d]
+    let d = arr.sort((a, b) => a - b).slice(-2).shift()
+    return d
+}
+console.log(secondLargestNumber(data))
