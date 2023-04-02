@@ -35,7 +35,7 @@ const orders = [
 
 // const item = 'burger'
 
-// console.log(foodPrices[item])
+// console.log(foodPrices[item], "zahid")
 
 // for(let x in foodPrices){}
 
@@ -46,8 +46,6 @@ const calculateOrderPrice = (order) => {
 
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
-
-        console.log(foodPrices[item], item)
         amount += foodPrices[item]
     }
     // console.log(amount, "amount")
@@ -57,7 +55,6 @@ const calculateOrderPrice = (order) => {
 // 
 const calculateAmount = () => {
     let totalAmount = 0;
-
     for (let i = 0; i < orders.length; i++) {
         const order = orders[i];
         totalAmount += calculateOrderPrice(order)
@@ -66,51 +63,26 @@ const calculateAmount = () => {
 
 }
 
-calculateAmount()
+// console.log(calculateAmount())
+
 
 // console.log(calculateOrderPrice(orders[0]))
 
 
 
+// function getTotal(prices, orders) {
+//     let totalAmount = 0;
+//     let totalOrder = {};
 
-
-
-
-
-// const { fries, salad, soda, pizza, sandwich, water, coffee, soup } = price;
-
-// const calculateAmountOrder = (price, data) => {
-//     let priceArr = []
-//     for (let prices in price) {
-//         priceArr.push(prices)
-//     }
-//     // console.log(priceArr, "priceArr")
-
-//     const x = data.map((ele) => {
-//         let y;
-//         if (ele.tableNumber === 1) {
-//             y = ele.items.filter(item => item === priceArr.map(ele => ele))
+//     for (let ele of orders) {
+//         for (item of ele.items) {
+//             totalOrder[item] = (totalOrder[item] || 0) + 1
 //         }
-//         return y
-//     });
-//     return x
+//     }
+
+//     for (let ele in totalOrder) {
+//         totalAmount += prices[ele] + totalOrder[ele]
+//     }
+//     return totalAmount
 // }
-// console.log(calculateAmountOrder(foodPrices, orders))
-
-
-function getTotal(prices, orders) {
-    let totalAmount = 0;
-    let totalOrder = {};
-
-    for (let ele of orders) {
-        for (item of ele.items) {
-            totalOrder[item] = (totalOrder[item] || 0) + 1
-        }
-    }
-
-    for (let ele in totalOrder) {
-        totalAmount += prices[ele] + totalOrder[ele]
-    }
-    return totalAmount
-}
-console.log(getTotal(foodPrices, orders), "getTotal")
+// console.log(getTotal(foodPrices, orders), "getTotal")
