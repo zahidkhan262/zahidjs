@@ -7,4 +7,4 @@ function attachAddEventListener() {
             console.log('Button is clicked', ++count)
         })
 }
-attachAddEventListener()
+attachAddEventListener();
