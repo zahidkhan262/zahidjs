@@ -90,3 +90,20 @@ const findDuplicateValue = (arr) => {
 
 }
 console.log(findDuplicateValue(data))
+
+
+let num = [ 1, 3, 7, 5, 6, 2 ];
+let n = num.length;
+
+function findMissing(arr, len){
+    let newArr = arr.sort((a,b)=> a-b)
+    console.log(newArr,"new")
+
+    for(let i=0; i<n; i++){
+        if(newArr[i] - newArr[i+1] !== -1) {
+          let data = newArr[i] +1
+        console.log(data,"data")
+        }
+    }
+}
+findMissing(num, n)
