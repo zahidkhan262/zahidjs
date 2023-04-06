@@ -131,7 +131,7 @@ console.log(myArray); // output: ['1- date', '2-banana', 'apple', 'cherry']
 // highr order functio
 
 
-function map(arr, fn) {
+function test(arr, fn) {
     const result = [];
     for (let i = 0; i < arr.length; i++) {
         result.push(fn(arr[i]));
@@ -140,5 +140,5 @@ function map(arr, fn) {
 }
 const numb = [1, 2, 3, 4, 5];
 const double = (x) => x * 2;
-const doubledNumbers = map(numb, double);
+const doubledNumbers = test(numb, double);
 console.log(doubledNumbers);
