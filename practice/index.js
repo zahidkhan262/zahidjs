@@ -92,17 +92,17 @@ const findDuplicateValue = (arr) => {
 console.log(findDuplicateValue(data))
 
 
-let num = [ 1, 3, 7, 5, 6, 2 ];
+let num = [1, 3, 7, 5, 6, 2];
 let n = num.length;
 
-function findMissing(arr, len){
-    let newArr = arr.sort((a,b)=> a-b)
-    console.log(newArr,"new")
+function findMissing(arr, len) {
+    let newArr = arr.sort((a, b) => a - b)
+    console.log(newArr, "new")
 
-    for(let i=0; i<n; i++){
-        if(newArr[i] - newArr[i+1] !== -1) {
-          let data = newArr[i] +1
-        console.log(data,"data")
+    for (let i = 0; i < n; i++) {
+        if (newArr[i] - newArr[i + 1] !== -1) {
+            let data = newArr[i] + 1
+            console.log(data, "data")
         }
     }
 }
@@ -113,16 +113,32 @@ const myArray = ['apple', '2-banana', 'cherry', '1- date'];
 
 // sort the array based on the numeric values
 myArray.sort((a, b) => {
-  const aNum = parseInt(a.match(/\d+/), 10);
-  const bNum = parseInt(b.match(/\d+/), 10);
+    const aNum = parseInt(a.match(/\d+/), 10);
+    const bNum = parseInt(b.match(/\d+/), 10);
 
-  if (isNaN(aNum)) {
-    return -1; // put non-numeric values before numeric values
-  }
-  if (isNaN(bNum)) {
-    return 1; // put non-numeric values before numeric values
-  }
-  return aNum - bNum; // sort based on numeric value
+    if (isNaN(aNum)) {
+        return -1; // put non-numeric values before numeric values
+    }
+    if (isNaN(bNum)) {
+        return 1; // put non-numeric values before numeric values
+    }
+    return aNum - bNum; // sort based on numeric value
 });
 
 console.log(myArray); // output: ['1- date', '2-banana', 'apple', 'cherry']
+
+
+// highr order functio
+
+
+function map(arr, fn) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+        result.push(fn(arr[i]));
+    }
+    return result;
+}
+const numb = [1, 2, 3, 4, 5];
+const double = (x) => x * 2;
+const doubledNumbers = map(numb, double);
+console.log(doubledNumbers);
