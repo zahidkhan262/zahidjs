@@ -107,3 +107,22 @@ function findMissing(arr, len){
     }
 }
 findMissing(num, n)
+
+// sort the string of array and mixup with number
+const myArray = ['apple', '2-banana', 'cherry', '1- date'];
+
+// sort the array based on the numeric values
+myArray.sort((a, b) => {
+  const aNum = parseInt(a.match(/\d+/), 10);
+  const bNum = parseInt(b.match(/\d+/), 10);
+
+  if (isNaN(aNum)) {
+    return -1; // put non-numeric values before numeric values
+  }
+  if (isNaN(bNum)) {
+    return 1; // put non-numeric values before numeric values
+  }
+  return aNum - bNum; // sort based on numeric value
+});
+
+console.log(myArray); // output: ['1- date', '2-banana', 'apple', 'cherry']
