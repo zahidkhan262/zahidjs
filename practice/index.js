@@ -142,3 +142,22 @@ const numb = [1, 2, 3, 4, 5];
 const double = (x) => x * 2;
 const doubledNumbers = test(numb, double);
 console.log(doubledNumbers);
+
+// palindrom number
+
+
+function isPalindrome(num) {
+  // Convert the number to a string
+  let str = num.toString();
+  // Loop through the string from both ends, comparing characters
+  for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+    if (str[i] !== str[j]) {
+      // If the characters don't match, it's not a palindrome
+      return false;
+    }
+  }
+  // If we've made it this far, it's a palindrome
+  return true;
+}
+console.log(isPalindrome(121)); // true
+console.log(isPalindrome(123)); // false
