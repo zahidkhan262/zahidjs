@@ -161,3 +161,23 @@ function isPalindrome(num) {
 }
 console.log(isPalindrome(121)); // true
 console.log(isPalindrome(123)); // false
+
+//closure
+In JavaScript, closure is a mechanism that allows a function to access variables from its lexical scope even after the function has finished executing.
+
+// When a function is defined inside another function, 
+// the inner function can access the outer function's variables,
+// even if the outer function has already returned.
+// This is possible because the inner function has created 
+// a closure over the variables in the outer function's scope.
+
+let a = 20;
+function out(){
+    let b=30;
+    function inner(){
+        console.log(a,b)
+    }
+    return inner
+}
+const xyz=out()
+xyz()
