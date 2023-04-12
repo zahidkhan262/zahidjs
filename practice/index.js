@@ -1,4 +1,6 @@
 const nums = [12, 1, 33, 43, 3, 2, 6, 55, 2, 5, 6, 7, 0];
+const regex = /(\d+\.)?\s*(\n\n|\n)/;
+replace(/^\d+\.\s*/, '');
 
 const findLargestNumber = (arr) => {
     const largestNumber = arr.reduce((prev, curr) => {
