@@ -192,3 +192,89 @@ function out(){
 }
 const xyz=out()
 xyz()
+
+import React, { useEffect, useState } from 'react'
+import { Configuration, OpenAIApi } from "openai";
+import { Button, Col, Container } from 'react-bootstrap'
+import openai from 'openai';
+
+const ChatGpt = () => {
+    const [q, setQ] = useState('')
+    const [data, setData] = useState([]);
+    const [response, setResponse] = useState([]);
+    const [prompt, setPrompt] = useState('');
+
+    const API_KEY_OPEN_AI = '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';
+
+    const str = `1- React js is.
+    2- which is used for make user.
+    3-It is used virtual dom instead of real dom because virtual dom is faster than real dom.`
+
+    const newStr = str.split('\n')
+    // console.log(newStr, "newStr")
+
+
+
+    const configuration = new Configuration({
+        apiKey: API_KEY_OPEN_AI,
+    });
+
+
+    const openai = new OpenAIApi(configuration);
+
+    async function getResponse(prompt) {
+        // const response = await openai.createCompletion({
+        //     model: 'text-davinci-003',
+        //     prompt,
+        //     max_tokens: 3940,
+        //     temperature: 1,
+        //     frequency_penalty: 0.5,
+        //     presence_penalty: 0.9,
+        //     top_p: 0.8
+        // });
+        const response = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [
+                { role: 'system', content: prompt },
+                { role: 'assistant', content: 'Assistant: ' }
+            ],
+            temperature: 0.7,
+            max_tokens: 3097,
+        });
+        return response.data.choices[0].message?.content;
+    }
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const regex = /(\d+\.)?\s*(\n\n|\n)/;
+        const getRes = await getResponse(q)
+        const originalStr = getRes.split(regex)
+        console.log(getRes, "gett ")
+        setResponse(originalStr)
+    }
+
+
+    console.log(response, "response");
+
+    return (
+        <Container>
+            <div className="input-field">
+                <input type="text" placeholder='Search here...' value={q} onChange={(e) => setQ(e.target.value)} />
+            </div>
+            <Button onClick={handleSubmit}>Search</Button>
+            <Col>
+                <div className="cards p-3 text-white-50">
+                    {
+                        response && response?.map((ele, id) => {
+                            return (
+                                <p key={id}>{ele}</p>
+                            )
+                        })
+                    }
+                </div>
+            </Col>
+        </Container>
+
+    )
+}
+
+export default ChatGpt
