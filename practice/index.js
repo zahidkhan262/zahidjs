@@ -13,7 +13,16 @@ const findLargestNumber = (arr) => {
 }
 console.log(findLargestNumber(nums));
 
-
+        // const response = await openai.createChatCompletion({
+        //     model: "gpt-3.5-turbo",
+        //     messages: [
+        //         { role: 'system', content: prompt },
+        //         { role: 'assistant', content: 'Assistant: ' }
+        //     ],
+        //     temperature: 0.7,
+        //     max_tokens: 3097,
+        // });
+        // return response.data.choices[0].messages;
 
 const addAllArrayNumber = (arr) => {
     const addAll = arr.reduce((prev, curr) => {
