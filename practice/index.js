@@ -278,3 +278,12 @@ const ChatGpt = () => {
 }
 
 export default ChatGpt
+
+
+
+// filter with nummeric
+const strings = ['123abc', 'def456', '789ghi', 'jklmno'];
+
+const filteredStrings = strings.filter((str) => /^[0-9]/.test(str));
+
+console.log(filteredStrings); // Output: ['123abc', '789ghi']
