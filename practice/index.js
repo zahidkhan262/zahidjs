@@ -287,3 +287,25 @@ const strings = ['123abc', 'def456', '789ghi', 'jklmno'];
 const filteredStrings = strings.filter((str) => /^[0-9]/.test(str));
 
 console.log(filteredStrings); // Output: ['123abc', '789ghi']
+
+
+
+// call bind and apply
+
+const obj ={
+    title:'react',
+    salary:10000
+}
+const obj2 = {
+    country:'India',
+    state:'UP'
+}
+function detail(name, lastname) {
+  return this.title + " " + this.salary + " " + name + " " +lastname;
+}
+console.log(detail.call(obj, "sanjeet", "pal")) // call
+
+// console.log(detail.apply(obj, ["zahid","khan"]))  //apply
+
+// const getInfo = detail.bind(obj) //bind
+// console.log(getInfo())
