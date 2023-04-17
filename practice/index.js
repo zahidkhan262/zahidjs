@@ -33,6 +33,14 @@ const addAllArrayNumber = (arr) => {
 }
 console.log(addAllArrayNumber(nums))
 
+let data = {
+    address:{
+        city:'Noida'
+    }
+}
+
+console.log(data?.address?.city.a)
+
 
 // next
 const numbers = [1, 4, '1', '2', 4, 6, 6, 'a', 6, undefined, NaN];
