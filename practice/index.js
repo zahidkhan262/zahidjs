@@ -313,7 +313,7 @@ function detail(name, lastname) {
 }
 console.log(detail.call(obj, "sanjeet", "pal")) // call
 
-// console.log(detail.apply(obj, ["zahid","khan"]))  //apply
+console.log(detail.apply(obj, ["zahid","khan"]))  //apply
 
-// const getInfo = detail.bind(obj) //bind
-// console.log(getInfo())
+const getInfo = detail.bind(obj) //bind
+console.log(getInfo("pathaan","khan"))
