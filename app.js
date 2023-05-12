@@ -56,3 +56,8 @@ function CheckboxList() {
     </div>
   );
 }
+
+filter
+        // let newRes: any = res?.filter(
+        //     (ele: any) => ele !== undefined && ele !== '\n' && /^[0-9]/.test(ele),
+        // );
