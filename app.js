@@ -61,3 +61,14 @@ filter
         // let newRes: any = res?.filter(
         //     (ele: any) => ele !== undefined && ele !== '\n' && /^[0-9]/.test(ele),
         // );
+
+ const filterData = (gapData: any) => {
+        let gap = undefined;
+        const checkNumerics = /\d+\.\s(.*?)(?=,|\n|$)/g;
+        let newRes: any = gapData.toString()?.match(checkNumerics);
+        if (newRes) {
+            gap = newRes?.map((ele: any) => ele?.replace(/^\d+\.\s/, ''));
+        }
+        return gap;
+    };
+filterData(data)
