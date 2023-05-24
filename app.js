@@ -62,16 +62,18 @@ filter
         //     (ele: any) => ele !== undefined && ele !== '\n' && /^[0-9]/.test(ele),
         // );
 
- const filterData = (gapData: any) => {
-        let gap = undefined;
+ const filterData = (data: any) => {
+        let data = undefined;
         const checkNumerics = /\d+\.\s(.*?)(?=,|\n|$)/g;
-        let newRes: any = gapData.toString()?.match(checkNumerics);
+        let newRes: any = data.toString()?.match(checkNumerics);
         if (newRes) {
-            gap = newRes?.map((ele: any) => ele?.replace(/^\d+\.\s/, ''));
+            data = newRes?.map((ele: any) => ele?.replace(/^\d+\.\s/, ''));
         }
-        return gap;
+        return data;
     };
 filterData(data)
+
+<h2>{filterData(list)}</h2>
 
 
 
