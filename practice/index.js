@@ -317,3 +317,28 @@ console.log(detail.apply(obj, ["zahid","khan"]))  //apply
 
 const getInfo = detail.bind(obj) //bind
 console.log(getInfo("pathaan","khan"))
+
+
+
+function P(n = 0) {
+    if (n === 1) {
+        return Promise.resolve("zahid");
+    }
+    return Promise.reject("khan");
+}
+P(1).then((x) => {
+        console.log(x,"res");
+        return P(0);
+    })
+    .then(() => {
+        console.log('hello');
+    })
+    .catch((e) => {
+        console.log(e,"rej");
+    })
+    .then(() => {
+        console.log('world!');
+    })
+    .then(() => {
+        console.log('world2!');
+    });
