@@ -179,3 +179,33 @@ const DistanceCalculator = () => {
 
 export default DistanceCalculator;
 
+
+const calculateRemainingTime = () => {
+        let remainingTime = null
+        const expiryDate = new Date('2026-05-23');
+        const currentTime = new Date();
+        const timeDifference = expiryDate - currentTime;
+        console.log(timeDifference, "time dff")
+        // Check if the expiry date has passed
+        if (timeDifference <= 0) {
+            // Handle the case when the expiry date has passed
+            clearInterval(this.interval);
+            remainingTime = null
+            return;
+        }
+
+        // Calculate the remaining time in days, hours, minutes, and seconds
+        const months = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30));
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
+        const seconds = Math.floor((timeDifference / 1000) % 60);
+
+        // Set the remaining time in the state
+        console.log(months, "months")
+        console.log(days, "days")
+        console.log(hours, "hours")
+        // remainingTime = days
+    };
+    calculateRemainingTime()
+
