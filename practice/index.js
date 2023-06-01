@@ -342,3 +342,20 @@ P(1).then((x) => {
     .then(() => {
         console.log('world2!');
     });
+// add two table with different key value pair accordingly
+const userTable = [
+    {name:'zahid',userId:24,address:'noida'},
+     {name:'gagan',userId:28,address:'delhi'},
+     {name:'kuldeep',userId:26,address:'gzb'},
+    ];
+    const pmTable = [
+    {projectName:'itmg',userId:24,place:'noida'},
+     {projectName:'coforg',userId:28,place:'delhi'},
+     { userId: 28, projectName: 'uiDef',place:'up' },
+     {projectName:'dmee',userId:26,place:'gzb'},
+    ];
+
+const ProjectArray = pmTable.map(({ userId, projectName }) => ({ userId, projectName }));
+const oneTable = [...userTable, ...ProjectArray]
+console.log(ProjectArray);
+console.log(oneTable,"oneTable");
