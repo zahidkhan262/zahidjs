@@ -381,3 +381,16 @@ console.log(findUniqueElement(data))
 const uniqueElements = [...new Set(data)];
 
 console.log(uniqueElements);
+
+
+
+//by using indexOf method
+let uniqueElements = [];
+
+for (let i = 0; i < data.length; i++) {
+  if (uniqueElements.indexOf(data[i]) === -1) {
+    uniqueElements.push(data[i]);
+  }
+}
+
+console.log(uniqueElements);
