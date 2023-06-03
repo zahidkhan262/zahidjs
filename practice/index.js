@@ -359,3 +359,25 @@ const ProjectArray = pmTable.map(({ userId, projectName }) => ({ userId, project
 const oneTable = [...userTable, ...ProjectArray]
 console.log(ProjectArray);
 console.log(oneTable,"oneTable");
+
+
+
+// array question
+
+const data = [1, 2, 3, 4, 5, 1, 2,5]
+
+const findUniqueElement = (arr) =>{
+    const newArr = []
+    for(let i=0;i< arr.length; i++){
+        if(!newArr.includes(arr[i])){
+            newArr.push(arr[i])
+        }
+    }
+    return newArr
+}
+console.log(findUniqueElement(data))
+
+//second and easy way
+const uniqueElements = [...new Set(data)];
+
+console.log(uniqueElements);
