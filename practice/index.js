@@ -406,3 +406,19 @@ const fromPairs = (Array) => {
 
 const data = [['a', 1], ['b', 2], ['c', 3], ['d', 4]]
 console.log(fromPairs(data))
+
+//find the occurances in array
+const data = [1,3,1,4,5,6,2,4,6,7,2,3];
+
+const findNumberOfOccurances = (arr) => {
+    let hashCount = {}
+    for(let x = 0; x< arr.length; x++){
+     if(hashCount[arr[x]]){
+            hashCount[arr[x]] += 1
+        }else{
+            hashCount[arr[x]] = 1
+        }
+    }
+    return hashCount
+}
+console.log(findNumberOfOccurances(data),"occurs")
