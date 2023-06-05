@@ -422,3 +422,20 @@ const findNumberOfOccurances = (arr) => {
     return hashCount
 }
 console.log(findNumberOfOccurances(data),"occurs")
+
+
+// find the number occurances in object by name or Id
+
+const findNumberOfOccurances = (arr) =>{
+    let hash = {}
+    for(let i=0; i<arr.length; i++){
+        if(hash[arr[i].name]){
+            hash[arr[i].name] +=1
+        }else{
+            hash[arr[i].name] = 1
+        }
+    }
+    return hash
+}
+
+console.log(findNumberOfOccurances(arrObj),"arrObj")
