@@ -13,16 +13,16 @@ const findLargestNumber = (arr) => {
 }
 console.log(findLargestNumber(nums));
 
-        // const response = await openai.createChatCompletion({
-        //     model: "gpt-3.5-turbo",
-        //     messages: [
-        //         { role: 'system', content: prompt },
-        //         { role: 'assistant', content: 'Assistant: ' }
-        //     ],
-        //     temperature: 0.7,
-        //     max_tokens: 3097,
-        // });
-        // return response.data.choices[0].messages;
+// const response = await openai.createChatCompletion({
+//     model: "gpt-3.5-turbo",
+//     messages: [
+//         { role: 'system', content: prompt },
+//         { role: 'assistant', content: 'Assistant: ' }
+//     ],
+//     temperature: 0.7,
+//     max_tokens: 3097,
+// });
+// return response.data.choices[0].messages;
 
 const addAllArrayNumber = (arr) => {
     const addAll = arr.reduce((prev, curr) => {
@@ -33,13 +33,13 @@ const addAllArrayNumber = (arr) => {
 }
 console.log(addAllArrayNumber(nums))
 
-let data = {
-    address:{
-        city:'Noida'
+let dataaa = {
+    address: {
+        city: 'Noida'
     }
 }
 
-console.log(data?.address?.city.a)
+console.log(dataaa?.address?.city.a)
 
 
 // next
@@ -73,30 +73,30 @@ const obj1 = {};
 obj1.name = 'zahid';
 
 obj1.name = 'suboor'
-const a = 'age';
+const aa = 'age';
 
-obj1[a] = 24;
+obj1[aa] = 24;
 
 console.log(obj1, "obj1");
 
 
-const obj2 = {};
+const obj22 = {};
 const name = 'aabbcccabaabbcddbd'
 
 for (let x = 0; x < name.length; x++) {
     const alphabet = name[x];
     // obj2[alphabet] = alphabet
-    if (obj2[alphabet] != undefined) {
-        obj2[alphabet] = obj2[alphabet] + 1
+    if (obj22[alphabet] != undefined) {
+        obj22[alphabet] = obj22[alphabet] + 1
     } else {
-        obj2[alphabet] = 1
+        obj22[alphabet] = 1
     }
 
 }
 console.log(obj2, "obj2");
 
 
-let data = [20, 20, 40, 2, 30, 50, 2, 30, 55, 50, 1, 6, 9, 9]
+let data11 = [20, 20, 40, 2, 30, 50, 2, 30, 55, 50, 1, 6, 9, 9]
 
 const findDuplicateValue = (arr) => {
     const hash = {}
@@ -108,7 +108,7 @@ const findDuplicateValue = (arr) => {
     return Object.values(hash)
 
 }
-console.log(findDuplicateValue(data))
+console.log(findDuplicateValue(data11))
 
 
 let num = [1, 3, 7, 5, 6, 2];
@@ -166,23 +166,23 @@ console.log(doubledNumbers);
 
 
 function isPalindrome(num) {
-  // Convert the number to a string
-  let str = num.toString();
-  // Loop through the string from both ends, comparing characters
-  for (let i = 0, j = str.length - 1; i < j; i++, j--) {
-    if (str[i] !== str[j]) {
-      // If the characters don't match, it's not a palindrome
-      return false;
+    // Convert the number to a string
+    let str = num.toString();
+    // Loop through the string from both ends, comparing characters
+    for (let i = 0, j = str.length - 1; i < j; i++, j--) {
+        if (str[i] !== str[j]) {
+            // If the characters don't match, it's not a palindrome
+            return false;
+        }
     }
-  }
-  // If we've made it this far, it's a palindrome
-  return true;
+    // If we've made it this far, it's a palindrome
+    return true;
 }
 console.log(isPalindrome(121)); // true
 console.log(isPalindrome(123)); // false
 
 //closure
-In JavaScript, closure is a mechanism that allows a function to access variables from its lexical scope even after the function has finished executing.
+// In JavaScript, closure is a mechanism that allows a function to access variables from its lexical scope even after the function has finished executing.
 
 // When a function is defined inside another function, 
 // the inner function can access the outer function's variables,
@@ -191,101 +191,101 @@ In JavaScript, closure is a mechanism that allows a function to access variables
 // a closure over the variables in the outer function's scope.
 
 let a = 20;
-function out(){
-    let b=30;
-    function inner(){
-        console.log(a,b)
+function out() {
+    let b = 30;
+    function inner() {
+        console.log(a, b)
     }
     return inner
 }
-const xyz=out()
+const xyz = out()
 xyz()
 
-import React, { useEffect, useState } from 'react'
-import { Configuration, OpenAIApi } from "openai";
-import { Button, Col, Container } from 'react-bootstrap'
-import openai from 'openai';
+// import React, { useEffect, useState } from 'react'
+// import { Configuration, OpenAIApi } from "openai";
+// import { Button, Col, Container } from 'react-bootstrap'
+// import openai from 'openai';
 
-const ChatGpt = () => {
-    const [q, setQ] = useState('')
-    const [data, setData] = useState([]);
-    const [response, setResponse] = useState([]);
-    const [prompt, setPrompt] = useState('');
+// const ChatGpt = () => {
+//     const [q, setQ] = useState('')
+//     const [data, setData] = useState([]);
+//     const [response, setResponse] = useState([]);
+//     const [prompt, setPrompt] = useState('');
 
-    const API_KEY_OPEN_AI = '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';
+//     const API_KEY_OPEN_AI = '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';
 
-    const str = `1- React js is.
-    2- which is used for make user.
-    3-It is used virtual dom instead of real dom because virtual dom is faster than real dom.`
+//     const str = `1- React js is.
+//     2- which is used for make user.
+//     3-It is used virtual dom instead of real dom because virtual dom is faster than real dom.`
 
-    const newStr = str.split('\n')
-    // console.log(newStr, "newStr")
-
-
-
-    const configuration = new Configuration({
-        apiKey: API_KEY_OPEN_AI,
-    });
+//     const newStr = str.split('\n')
+//     // console.log(newStr, "newStr")
 
 
-    const openai = new OpenAIApi(configuration);
 
-    async function getResponse(prompt) {
-        // const response = await openai.createCompletion({
-        //     model: 'text-davinci-003',
-        //     prompt,
-        //     max_tokens: 3940,
-        //     temperature: 1,
-        //     frequency_penalty: 0.5,
-        //     presence_penalty: 0.9,
-        //     top_p: 0.8
-        // });
-        const response = await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
-            messages: [
-                { role: 'system', content: prompt },
-                { role: 'assistant', content: 'Assistant: ' }
-            ],
-            temperature: 0.7,
-            max_tokens: 3097,
-        });
-        return response.data.choices[0].message?.content;
-    }
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const regex = /(\d+\.)?\s*(\n\n|\n)/;
-        const getRes = await getResponse(q)
-        const originalStr = getRes.split(regex)
-        console.log(getRes, "gett ")
-        setResponse(originalStr)
-    }
+//     const configuration = new Configuration({
+//         apiKey: API_KEY_OPEN_AI,
+//     });
 
 
-    console.log(response, "response");
+//     const openai = new OpenAIApi(configuration);
 
-    return (
-        <Container>
-            <div className="input-field">
-                <input type="text" placeholder='Search here...' value={q} onChange={(e) => setQ(e.target.value)} />
-            </div>
-            <Button onClick={handleSubmit}>Search</Button>
-            <Col>
-                <div className="cards p-3 text-white-50">
-                    {
-                        response && response?.map((ele, id) => {
-                            return (
-                                <p key={id}>{ele}</p>
-                            )
-                        })
-                    }
-                </div>
-            </Col>
-        </Container>
+//     async function getResponse(prompt) {
+//         // const response = await openai.createCompletion({
+//         //     model: 'text-davinci-003',
+//         //     prompt,
+//         //     max_tokens: 3940,
+//         //     temperature: 1,
+//         //     frequency_penalty: 0.5,
+//         //     presence_penalty: 0.9,
+//         //     top_p: 0.8
+//         // });
+//         const response = await openai.createChatCompletion({
+//             model: "gpt-3.5-turbo",
+//             messages: [
+//                 { role: 'system', content: prompt },
+//                 { role: 'assistant', content: 'Assistant: ' }
+//             ],
+//             temperature: 0.7,
+//             max_tokens: 3097,
+//         });
+//         return response.data.choices[0].message?.content;
+//     }
+//     const handleSubmit = async (event) => {
+//         event.preventDefault();
+//         const regex = /(\d+\.)?\s*(\n\n|\n)/;
+//         const getRes = await getResponse(q)
+//         const originalStr = getRes.split(regex)
+//         console.log(getRes, "gett ")
+//         setResponse(originalStr)
+//     }
 
-    )
-}
 
-export default ChatGpt
+//     console.log(response, "response");
+
+//     return (
+//         <Container>
+//             <div className="input-field">
+//                 <input type="text" placeholder='Search here...' value={q} onChange={(e) => setQ(e.target.value)} />
+//             </div>
+//             <Button onClick={handleSubmit}>Search</Button>
+//             <Col>
+//                 <div className="cards p-3 text-white-50">
+//                     {
+//                         response && response?.map((ele, id) => {
+//                             return (
+//                                 <p key={id}>{ele}</p>
+//                             )
+//                         })
+//                     }
+//                 </div>
+//             </Col>
+//         </Container>
+
+//     )
+// }
+
+// export default ChatGpt
 
 
 
@@ -300,23 +300,23 @@ console.log(filteredStrings); // Output: ['123abc', '789ghi']
 
 // call bind and apply
 
-const obj ={
-    title:'react',
-    salary:10000
+const obj = {
+    title: 'react',
+    salary: 10000
 }
 const obj2 = {
-    country:'India',
-    state:'UP'
+    country: 'India',
+    state: 'UP'
 }
 function detail(name, lastname) {
-  return this.title + " " + this.salary + " " + name + " " +lastname;
+    return this.title + " " + this.salary + " " + name + " " + lastname;
 }
 console.log(detail.call(obj, "sanjeet", "pal")) // call
 
-console.log(detail.apply(obj, ["zahid","khan"]))  //apply
+console.log(detail.apply(obj, ["zahid", "khan"]))  //apply
 
 const getInfo = detail.bind(obj) //bind
-console.log(getInfo("pathaan","khan"))
+console.log(getInfo("pathaan", "khan"))
 
 
 
@@ -327,14 +327,14 @@ function P(n = 0) {
     return Promise.reject("khan");
 }
 P(1).then((x) => {
-        console.log(x,"res");
-        return P(0);
-    })
+    console.log(x, "res");
+    return P(0);
+})
     .then(() => {
         console.log('hello');
     })
     .catch((e) => {
-        console.log(e,"rej");
+        console.log(e, "rej");
     })
     .then(() => {
         console.log('world!');
@@ -344,32 +344,32 @@ P(1).then((x) => {
     });
 // add two table with different key value pair accordingly
 const userTable = [
-    {name:'zahid',userId:24,address:'noida'},
-     {name:'gagan',userId:28,address:'delhi'},
-     {name:'kuldeep',userId:26,address:'gzb'},
-    ];
-    const pmTable = [
-    {projectName:'itmg',userId:24,place:'noida'},
-     {projectName:'coforg',userId:28,place:'delhi'},
-     { userId: 28, projectName: 'uiDef',place:'up' },
-     {projectName:'dmee',userId:26,place:'gzb'},
-    ];
+    { name: 'zahid', userId: 24, address: 'noida' },
+    { name: 'gagan', userId: 28, address: 'delhi' },
+    { name: 'kuldeep', userId: 26, address: 'gzb' },
+];
+const pmTable = [
+    { projectName: 'itmg', userId: 24, place: 'noida' },
+    { projectName: 'coforg', userId: 28, place: 'delhi' },
+    { userId: 28, projectName: 'uiDef', place: 'up' },
+    { projectName: 'dmee', userId: 26, place: 'gzb' },
+];
 
 const ProjectArray = pmTable.map(({ userId, projectName }) => ({ userId, projectName }));
 const oneTable = [...userTable, ...ProjectArray]
 console.log(ProjectArray);
-console.log(oneTable,"oneTable");
+console.log(oneTable, "oneTable");
 
 
 
 // array question
 
-const data = [1, 2, 3, 4, 5, 1, 2,5]
+const data = [1, 2, 3, 4, 5, 1, 2, 5]
 
-const findUniqueElement = (arr) =>{
+const findUniqueElement = (arr) => {
     const newArr = []
-    for(let i=0;i< arr.length; i++){
-        if(!newArr.includes(arr[i])){
+    for (let i = 0; i < arr.length; i++) {
+        if (!newArr.includes(arr[i])) {
             newArr.push(arr[i])
         }
     }
@@ -385,15 +385,15 @@ console.log(uniqueElements);
 
 
 //by using indexOf method
-let uniqueElements = [];
+let uniqueElement = [];
 
 for (let i = 0; i < data.length; i++) {
-  if (uniqueElements.indexOf(data[i]) === -1) {
-    uniqueElements.push(data[i]);
-  }
+    if (uniqueElements.indexOf(data[i]) === -1) {
+        uniqueElements.push(data[i]);
+    }
 }
 
-console.log(uniqueElements);
+console.log(uniqueElement);
 
 //array obj
 const fromPairs = (Array) => {
@@ -404,38 +404,38 @@ const fromPairs = (Array) => {
     return newObject;
 }
 
-const data = [['a', 1], ['b', 2], ['c', 3], ['d', 4]]
-console.log(fromPairs(data))
+const datax = [['a', 1], ['b', 2], ['c', 3], ['d', 4]]
+console.log(fromPairs(datax))
 
 //find the occurances in array
-const data = [1,3,1,4,5,6,2,4,6,7,2,3];
+const datass = [1, 3, 1, 4, 5, 6, 2, 4, 6, 7, 2, 3];
 
 const findNumberOfOccurances = (arr) => {
     let hashCount = {}
-    for(let x = 0; x< arr.length; x++){
-     if(hashCount[arr[x]]){
+    for (let x = 0; x < arr.length; x++) {
+        if (hashCount[arr[x]]) {
             hashCount[arr[x]] += 1
-        }else{
+        } else {
             hashCount[arr[x]] = 1
         }
     }
     return hashCount
 }
-console.log(findNumberOfOccurances(data),"occurs")
+console.log(findNumberOfOccurances(datass), "occurs")
 
 
 // find the number occurances in object by name or Id
 
-const findNumberOfOccurances = (arr) =>{
+const findNumberOfOccurancess = (arr) => {
     let hash = {}
-    for(let i=0; i<arr.length; i++){
-        if(hash[arr[i].name]){
-            hash[arr[i].name] +=1
-        }else{
+    for (let i = 0; i < arr.length; i++) {
+        if (hash[arr[i].name]) {
+            hash[arr[i].name] += 1
+        } else {
             hash[arr[i].name] = 1
         }
     }
     return hash
 }
 
-console.log(findNumberOfOccurances(arrObj),"arrObj")
+console.log(findNumberOfOccurancess(arrObj), "arrObj")
