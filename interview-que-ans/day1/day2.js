@@ -28,11 +28,11 @@ isFileUpload()
 
 //by using then catch
 
-// uploadFile().then((result) => {
-//     console.log(result)
-// }).catch((err) => {
-//     console.log(err)
-// })
+uploadFile().then((result) => {
+    console.log(result)
+}).catch((err) => {
+    console.log(err)
+})
 
 // promise.race which is using for multiple promises
 
