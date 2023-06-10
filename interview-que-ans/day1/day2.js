@@ -60,3 +60,12 @@ const racePromises = async () => {
     }
 }
 racePromises();
+
+//add unique number 
+const data =[1,3,5,'6','7','3',undefined,null,true]
+
+const newData = data.map(Number).filter(ele => !Number.isNaN(ele))
+
+const unique = [...new Set(newData)].reduce((prev,curr)=> prev+=curr ,0 )
+console.log(unique,"zahid")
+
