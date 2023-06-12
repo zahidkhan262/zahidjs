@@ -69,3 +69,8 @@ const newData = data.map(Number).filter(ele => !Number.isNaN(ele))
 const unique = [...new Set(newData)].reduce((prev,curr)=> prev+=curr ,0 )
 console.log(unique,"zahid")
 
+
+what is the output
+console.log([].constructor.name,"op") //
+console.log({}.constructor.name,"op1") //
+
