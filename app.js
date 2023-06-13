@@ -209,3 +209,113 @@ const calculateRemainingTime = () => {
     };
     calculateRemainingTime()
 
+
+
+//jsx
+ const [toggleCart, setToggleCart] = useState(false);
+    const [activeTab, setActiveTab] = useState("tab1");
+const handleTab = (tab) => {
+        setActiveTab(tab)
+    }
+            <div className={`right-cart ${toggleCart ? 'right-cart-active' : ''}`}>
+                <div className="toogle-icon" onClick={() => setToggleCart(!toggleCart)}>v</div>
+                <div className="cart-header">
+                    <div className={`tab ${activeTab === 'tab1' ? 'active-tab' : ''} product-tab`} onClick={() => handleTab('tab1')}>Product</div>
+                    <div className={`tab ${activeTab === 'tab2' ? 'active-tab' : ''} price-tab`} onClick={() => handleTab('tab2')}>Price</div>
+                    <div className={`tab ${activeTab === 'tab3' ? 'active-tab' : ''}  order-tab`} onClick={() => handleTab('tab3')}>Order</div>
+                </div>
+
+                <div className="cart-body">
+                    {
+                        activeTab === "tab1" ?
+
+                            <div className="product-data">
+                                product is available here...
+                            </div>
+                            :
+                            activeTab === "tab2" ?
+
+                                <div className="price-data">
+                                    price is available here...
+                                </div>
+                                :
+                                <div className="order-data">
+                                    order is available here...
+                                </div>
+                    }
+                </div>
+            </div>
+            
+//             end
+//csss
+
+.right-cart {
+    max-width: 350px;
+    width: 100%;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    background: #f7f7f7;
+    max-height: 600px;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 1px 3px 5px 4px rgba(0, 0, 0, 0.5);
+    /* overflow-x: hidden; */
+    transition: 0.6s;
+}
+
+.right-cart-active {
+    max-height: 38px;
+    height: 100%;
+}
+
+.right-cart .cart-header {
+    padding: 0px 12px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid #b3b3b3 !important;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+
+.right-cart .tab {
+    padding: 10px 40px;
+    border-right: 0.5px solid #b3b3b3 !important;
+    color: #858585;
+}
+
+.right-cart .tab.active-tab {
+    background: #d8d8d8 !important;
+}
+
+.cart-body {
+    padding: 10px;
+}
+
+
+
+.toogle-icon {
+    background: #cdcdcd;
+    width: 91px;
+    height: 17px;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 84px 84px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    cursor: pointer;
+    /* z-index: -1; */
+}
+
+.toogle-icon:hover {
+    background: #f7f7f7;
+}
+

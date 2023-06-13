@@ -28,11 +28,11 @@ isFileUpload()
 
 //by using then catch
 
-// uploadFile().then((result) => {
-//     console.log(result)
-// }).catch((err) => {
-//     console.log(err)
-// })
+uploadFile().then((result) => {
+    console.log(result)
+}).catch((err) => {
+    console.log(err)
+})
 
 // promise.race which is using for multiple promises
 
@@ -60,3 +60,17 @@ const racePromises = async () => {
     }
 }
 racePromises();
+
+//add unique number 
+const data =[1,3,5,'6','7','3',undefined,null,true]
+
+const newData = data.map(Number).filter(ele => !Number.isNaN(ele))
+
+const unique = [...new Set(newData)].reduce((prev,curr)=> prev+=curr ,0 )
+console.log(unique,"zahid")
+
+
+what is the output
+console.log([].constructor.name,"op") //
+console.log({}.constructor.name,"op1") //
+
