@@ -62,15 +62,15 @@ const racePromises = async () => {
 racePromises();
 
 //add unique number 
-const data =[1,3,5,'6','7','3',undefined,null,true]
+const data = [1, 3, 5, '6', '7', '3', undefined, null, true]
 
 const newData = data.map(Number).filter(ele => !Number.isNaN(ele))
 
-const unique = [...new Set(newData)].reduce((prev,curr)=> prev+=curr ,0 )
-console.log(unique,"zahid")
+const unique = [...new Set(newData)].reduce((prev, curr) => prev += curr, 0)
+console.log(unique, "zahid")
 
 
-what is the output
-console.log([].constructor.name,"op") //
-console.log({}.constructor.name,"op1") //
+// what is the output
+console.log([].constructor.name, "op") // array
+console.log({}.constructor.name, "op1") // object
 
