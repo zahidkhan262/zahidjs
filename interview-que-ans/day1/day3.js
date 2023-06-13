@@ -23,3 +23,20 @@ const findPalindrom = (data) => {
     return palindrom === data ? true : false
 }
 console.log(findPalindrom('121'))
+
+
+function books1(Arr){
+    let x =[];
+    Arr.map(element => {
+        x= [...x,...element.books]
+    });
+    return x;
+}
+ console.log(books1(friends),"second")
+
+const collectBooks = (arr)=>{
+    const findBooks = arr.map(ele => ele.books)
+    return findBooks.flat()
+}
+
+console.log(collectBooks(friends),"first)
