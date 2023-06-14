@@ -201,3 +201,20 @@ return missingNum
 }
 console.log(filterData(data,Math.max(...data)))
 
+let a = '01.23.45'
+let b = '01.23.48'
+
+const findLatestVersion = (str1,str2)=>{
+    let latest;
+    if(parseInt(str1) > parseInt(str2)){
+        latest = str1
+        // console.log(str1)
+    }else{
+        latest = str2;
+        // console.log(str2)
+    }
+    
+return `${latest} is latest version`
+}
+console.log(findLatestVersion(a,b))
+
