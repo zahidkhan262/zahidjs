@@ -187,3 +187,17 @@ const findFebonaciSeries = (n) =>{
 }
 console.log(findFebonaciSeries(10))
 
+// find missing number
+const data = [1,3,4,5,20,27,29];
+
+const filterData = (arr,len)=>{
+ let missingNum = [];
+ for(let i=1;i<=len;i++){
+     if(arr.indexOf(i) === -1){
+         missingNum.push(i)
+     }
+ }
+return missingNum
+}
+console.log(filterData(data,Math.max(...data)))
+
