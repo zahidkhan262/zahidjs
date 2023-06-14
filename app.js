@@ -1,3 +1,29 @@
+import React from 'react';
+
+export default function App() {
+  const [time, setTime] = React.useState(0);
+  const [running, setRunning] = React.useState(false);
+
+  React.useEffect(() => {
+    let intervalId;
+    if (running) {
+      intervalId = setInterval(() => setTime(time + 1), 1000);
+    }
+    return () => clearInterval(intervalId);
+  }, [running, time]);
+  console.log(time);
+
+  return (
+    <div>
+      <h1>{time}</h1>
+      <button onClick={() => setRunning(!running)}>
+        {running ? 'Pause' : 'start'}
+      </button>
+      <button onClick={() => setTime(0)}>Reset</button>
+    </div>
+  );
+}
+
 import { findDuplicateValue } from "./array/duplicateValue";
 let data = [20, 20, 40, 2, 30, 50, 2, 30, 55, 50, 1, 6, 9, 9]
 
