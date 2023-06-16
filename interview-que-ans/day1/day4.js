@@ -218,3 +218,48 @@ return `${latest} is latest version`
 }
 console.log(findLatestVersion(a,b))
 
+
+
+const data = ['hello','world','react','js','react','world']
+
+const findFrequency = (arr) =>{
+    const freq = arr.reduce((allEle, ele)=>{
+        if(ele in allEle){
+            allEle[ele] +=1
+        }else{
+            allEle[ele] =1
+        }
+        return allEle
+    },{})
+    return freq
+} 
+console.log(findFrequency(data))
+
+const arr1 = [
+    {
+    name:'a'   
+    },
+    {
+    name:'b'    
+    },
+    {
+    name:'c'    
+    },
+    ]
+    
+    for(let i=0; i<arr1.length; i++){
+        switch(arr1[i].name){
+            case 'a':
+            console.log(arr1[i].name = "zahid")
+            break;
+            case 'b':
+            console.log(arr1[i].name = "motu")
+            break;
+            case 'c':
+            console.log(arr1[i].name = "patlu")
+            break;
+            default: 
+            break
+        }
+    }
+
