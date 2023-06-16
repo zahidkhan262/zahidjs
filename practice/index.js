@@ -439,3 +439,24 @@ const findNumberOfOccurancess = (arr) => {
 }
 
 console.log(findNumberOfOccurancess(arrObj), "arrObj")
+
+
+const people = [
+    { name: 'John', age: 25 },
+    { name: 'Alice', age: 30 },
+    { name: 'Bob', age: 25 },
+    { name: 'Eve', age: 30 },
+    { name: 'Alex', age: 35 }
+];
+
+const groupedByAge = people.reduce((acc, person) => {
+    const age = person.age;
+    if (acc[age]) {
+        acc[age].push(person);
+    } else {
+        acc[age] = [person];
+    }
+    return acc;
+}, {});
+
+console.log(groupedByAge);
