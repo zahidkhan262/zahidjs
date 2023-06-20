@@ -263,3 +263,36 @@ const arr1 = [
         }
     }
 
+
+// find twosum
+let arr = [2,3,5,7,90,23]
+let target = 12;
+let closet = 6;
+
+const twoSum = (arr,target)=>{
+    
+    for(let i=0; i<arr.length; i++){
+        for(let j=i+1; j<arr.length; j++){
+            if(arr[i] + arr[j] === target){
+                return [i ,j]
+            }
+        }
+    }
+    return []
+}
+console.log(twoSum(arr,target));
+// find closest number
+const findClosestNumber = (arr, target) => {
+  let closest = arr[0]; // Assuming the first element is the closest initially
+
+  for (let i = 1; i < arr.length; i++) {
+    if (Math.abs(target - arr[i]) < Math.abs(target - closest)) {
+      closest = arr[i];
+    }
+  }
+
+  return closest;
+}
+
+console.log(findClosestNumber(arr, target));
+
