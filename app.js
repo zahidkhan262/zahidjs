@@ -354,3 +354,13 @@ useEffect(() => {
       { rootMargin: "-300px" }
     );
   }, []);
+
+
+useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    });
+    console.log(isIntersecting);
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
