@@ -345,3 +345,12 @@ const handleTab = (tab) => {
     background: #f7f7f7;
 }
 
+
+useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin: "-300px" }
+    );
+  }, []);
