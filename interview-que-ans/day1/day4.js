@@ -296,3 +296,29 @@ const findClosestNumber = (arr, target) => {
 
 console.log(findClosestNumber(arr, target));
 
+
+
+// 
+function foo(outer_arg) {
+
+    function inner(inner_arg) {
+      return outer_arg + inner_arg;
+    }
+    return inner;
+}
+let get_func_inner = foo(10);
+
+console.log(get_func_inner(4));
+
+// 
+function sum(a) {
+  return function(b){
+    if(!b){
+        console.log("h")
+        return a;
+    }
+    return sum(a+b);
+  }
+}
+console.log(sum(1)(3)());  //21
+
