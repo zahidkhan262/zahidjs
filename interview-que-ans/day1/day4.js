@@ -322,3 +322,13 @@ function sum(a) {
 }
 console.log(sum(1)(3)());  //21
 
+function add(a){
+    return function(b){
+        if(!b){
+            return a;
+        }
+        return add(a+b)
+    }
+}
+console.log(add(1)(5)(49)(23)())
+
