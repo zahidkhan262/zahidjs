@@ -332,3 +332,10 @@ function add(a){
 }
 console.log(add(1)(5)(49)(23)())
 
+function makeRandomNumber() { 
+    // return Math.floor(Math.random() * (1000000 - 10000 + 1) + 10000)
+    return  Math.floor(Math.random()* 900000) + 100000
+  }
+  
+  console.log(makeRandomNumber())
+
