@@ -369,3 +369,19 @@ function sayHello(name) {
 // let a = "zahid" //a not access before initialize
 // const a = "zahid" // a not access before initialize
 
+
+// promises chaining
+new Promise((resolve) => {
+  setTimeout(() => resolve(1), 1000);
+}).then((result) => {
+  console.log(result); // will print '1' after 1 second
+  return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(2) // modify the value being resolved
+      }, 1000)
+  })
+}).then((result) => {
+  console.log(result); // will print '2' after another 1 second
+  return result;
+})
+
