@@ -339,3 +339,33 @@ function makeRandomNumber() {
   
   console.log(makeRandomNumber())
 
+///////////////////////////////////////day 05 /////////////////////////////////
+
+
+
+// let user ={
+//     name:'zahid khan'
+// }
+
+// function sayHello(greet){
+//     console.log(greet+ " " +this.name)
+// }
+
+// // sayHello("hii")
+
+// sayHello.call(user,"hey call method") //call
+
+// const hello = sayHello.bind(user,"bye bind method")
+// hello() // bind
+
+// sayHello.apply(user,["hello apply method"])
+
+sayHello(a);
+
+function sayHello(name) {
+  console.log(`Hello ${name}`);
+}
+// var a = "zahid" // undefined
+// let a = "zahid" //a not access before initialize
+// const a = "zahid" // a not access before initialize
+
