@@ -14,16 +14,16 @@ const findLargestNumber2 = (arr) => arr.reduce((prev, curr) => prev < curr ? pre
 console.log(findLargestNumber2(nums), "findLargest second way");
 console.log(findLargestNumber(nums), "findLargest first way");
 
-const findLargestNumber =(arr)=>{
-        let largest = 0;
-    for(let i=0; i<arr.length; i++){
-        if(arr[i]>largest){
-        largest = arr[i]
+const findLargestNumber1 = (arr) => {
+    let largest = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i]
         }
     }
     return largest
 }
-console.log(findLargestNumber(nums))
+console.log(findLargestNumber1(nums))
 
 /// add all ele
 const addElement = (arr) => arr.reduce((prev, curr) => prev += curr, 0)
@@ -38,3 +38,26 @@ const addIntegerEle = (arr) => arr.filter(ele => ele !== "string" && parseInt(el
 
 const addUniqueEle = (arr) => arr.filter(ele => ele !== "string" && parseInt(ele)).reduce((prev, curr) => prev += parseInt(curr))
 console.log(addUniqueEle(numbers), "add only unique value")
+
+
+
+//find second largest number
+
+const findSecondLargestNumber = (arr) => {
+    let max = 0;
+    let secMax = 0;
+    if (arr.length < 2) {
+        console.log("please enter atleast 2 integer")
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            secMax = max
+            max = arr[i];
+        } else if (max > secMax && secMax < arr[i]) {
+            secMax = arr[i]
+        }
+    }
+    return secMax
+
+}
+console.log(findSecondLargestNumber(nums))
