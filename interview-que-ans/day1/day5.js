@@ -21,3 +21,19 @@ const findSecondLargestNumber = (arr) => {
 }
 const nums = [232]
 console.log(findSecondLargestNumber(nums))
+
+//higher order function
+function applyOperation(a, b, operation) {
+  return operation(a, b);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+console.log(applyOperation(5, 3, add)); // Output: 8
+console.log(applyOperation(5, 3, subtract)); // Output: 2
