@@ -412,3 +412,30 @@ function App() {
 }
 
 export default App;
+
+//useFetch custom hook
+import React from 'react';
+
+const useFetch = (url) => {
+  const [data, setData] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
+  React.useEffect(() => {
+    (async () => {
+      try {
+        let res = await fetch(url);
+        res = await res.json();
+        setLoading(false);
+        setData(res);
+      } catch (err) {
+        setError(err);
+        setLoading(false);
+      }
+    })();
+  }, [url]);
+
+  return { data, loading, error };
+};
+
+export default useFetch;
+
