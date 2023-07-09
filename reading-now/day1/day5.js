@@ -109,6 +109,27 @@ const findTruthNumber = (arr) => {
     }
     return truthy
 
-
 }
 console.log(findTruthNumber(numbers), "truth number")
+
+
+// Prototype object
+const carPrototype = {
+    wheels: 4,
+    drive() {
+        console.log("The car is driving.");
+    },
+    honk() {
+        console.log("Beep beep!");
+    },
+};
+
+// Creating a new car object by cloning the prototype
+const myCar = Object.create(carPrototype);
+myCar.color = "red";
+
+// Accessing properties and methods
+console.log(myCar.color); // Output: "red"
+console.log(myCar.wheels); // Output: 4
+myCar.drive(); // Output: "The car is driving."
+myCar.honk(); // Output: "Beep beep!"
