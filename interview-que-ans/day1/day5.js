@@ -77,3 +77,26 @@ let x = 0.1 + 0.2;
 // let x = [1, 2, 3, 4, 5];
 // Expert2:34 PM
 // output should be 3,4,5
+
+
+// Prototype object
+const carPrototype = {
+  wheels: 4,
+  drive() {
+    console.log("The car is driving.");
+  },
+  honk() {
+    console.log("Beep beep!");
+  },
+};
+
+// Creating a new car object by cloning the prototype
+const myCar = Object.create(carPrototype);
+myCar.color = "red";
+
+// Accessing properties and methods
+console.log(myCar.color); // Output: "red"
+console.log(myCar.wheels); // Output: 4
+myCar.drive(); // Output: "The car is driving."
+myCar.honk(); // Output: "Beep beep!"
+
